@@ -1,53 +1,161 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#090611">
-  <meta name="description" content="KAYSEUR ACADEMY — cours, programmation et intelligence artificielle.">
+  <meta name="description" content="KAYSEUR ACADEMY - Apprends la programmation, le web, l'IA et la cybersécurité éthique.">
   <title>KAYSEUR ACADEMY</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<header class="topbar">
-  <a class="brand" href="#home"><span class="mark">K</span><span>KAYSEUR <b>ACADEMY</b></span></a>
-  <nav><a href="#courses">Cours</a><a href="#progress">Progression</a><a href="#assistant">KAYSEUR AI</a></nav>
-  <button class="outline" id="account">Mon compte</button>
-</header>
-<main>
-<section class="hero" id="home">
-  <div class="hero-copy">
-    <span class="eyebrow">✦ APPRENDS À TON RYTHME</span>
-    <h1>Transforme ta curiosité en <em>compétences.</em></h1>
-    <p>Des cours pratiques, des projets guidés et un assistant IA pour t'accompagner dans ton apprentissage du numérique.</p>
-    <a class="primary" href="#courses">Explorer les cours ↗</a>
-    <p class="note">✓ Les cours gratuits sont accessibles sans compte.</p>
+  <header class="topbar">
+    <a class="brand" href="#">
+      <span class="brand-icon">K</span>
+      <span>KAYSEUR <strong>ACADEMY</strong></span>
+    </a>
+
+    <nav class="top-actions">
+      <a href="#courses">Mes cours</a>
+      <a href="#about">À propos</a>
+      <button class="contact-button" id="contactButton">
+        Contacter le dev
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">TON ESPACE D'APPRENTISSAGE</span>
+        <h1>Apprends aujourd'hui.<br><span>Construis demain.</span></h1>
+        <p>
+          Découvre la programmation, l'intelligence artificielle,
+          le développement web et les technologies numériques.
+          Progresse à ton rythme avec des cours détaillés.
+        </p>
+        <a class="primary-button" href="#courses">Explorer les formations</a>
+      </div>
+      <div class="hero-symbol">K<span>A</span></div>
+    </section>
+
+    <section class="section" id="courses">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">APPRENDS À TON RYTHME</span>
+          <h2>Nos formations</h2>
+          <p>Choisis un domaine pour découvrir ses modules et ses leçons.</p>
+        </div>
+      </div>
+
+      <div class="course-grid" id="courseGrid">
+        <article class="course-card">
+          <div class="course-icon">🌐</div>
+          <h3>Développement Web</h3>
+          <p>Apprends HTML, CSS, JavaScript et la création de sites web.</p>
+          <button class="course-button" data-course="web">Voir les leçons</button>
+        </article>
+
+        <article class="course-card">
+          <div class="course-icon">💻</div>
+          <h3>Programmation</h3>
+          <p>Découvre la logique, les algorithmes et les langages de programmation.</p>
+          <button class="course-button" data-course="programming">Voir les leçons</button>
+        </article>
+
+        <article class="course-card">
+          <div class="course-icon">🤖</div>
+          <h3>Intelligence artificielle</h3>
+          <p>Comprends l'IA et apprends à créer des projets intelligents.</p>
+          <button class="course-button" data-course="ai">Voir les leçons</button>
+        </article>
+
+        <article class="course-card">
+          <div class="course-icon">🛡️</div>
+          <h3>Cybersécurité éthique</h3>
+          <p>Apprends à protéger les systèmes et à comprendre la sécurité informatique.</p>
+          <button class="course-button" data-course="security">Voir les leçons</button>
+        </article>
+
+        <article class="course-card">
+          <div class="course-icon">🎨</div>
+          <h3>Design UI/UX</h3>
+          <p>Apprends à concevoir des interfaces modernes et faciles à utiliser.</p>
+          <button class="course-button" data-course="design">Voir les leçons</button>
+        </article>
+
+        <article class="course-card">
+          <div class="course-icon">📱</div>
+          <h3>Applications mobiles</h3>
+          <p>Découvre les étapes de conception d'une application mobile.</p>
+          <button class="course-button" data-course="mobile">Voir les leçons</button>
+        </article>
+
+        <article class="course-card">
+          <div class="course-icon">⚙️</div>
+          <h3>Culture numérique</h3>
+          <p>Maîtrise les outils, les fichiers et les bases du monde numérique.</p>
+          <button class="course-button" data-course="digital">Voir les leçons</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="lesson-section hidden" id="lessonSection">
+      <button class="back-button" id="backButton">← Retour aux formations</button>
+      <div class="lesson-layout">
+        <aside class="lesson-sidebar">
+          <h3 id="courseTitle">Formation</h3>
+          <div id="lessonList"></div>
+        </aside>
+
+        <article class="lesson-content">
+          <span class="eyebrow" id="lessonModule">MODULE 1</span>
+          <h2 id="lessonTitle">Bienvenue dans la formation</h2>
+          <div id="lessonText">
+            <p>Choisis une leçon dans le menu pour commencer ton apprentissage.</p>
+          </div>
+          <div class="lesson-navigation">
+            <button id="previousLesson" disabled>← Précédent</button>
+            <button id="nextLesson">Suivant →</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <span class="eyebrow">NOTRE OBJECTIF</span>
+      <h2>Le savoir pour créer.</h2>
+      <p>
+        KAYSEUR ACADEMY est un espace d'apprentissage consacré
+        aux technologies, à la programmation et à la création numérique.
+      </p>
+    </section>
+  </main>
+
+  <div class="contact-panel hidden" id="contactPanel">
+    <div class="contact-card">
+      <button class="close-button" id="closeContact" aria-label="Fermer">×</button>
+      <span class="eyebrow">BESOIN D'AIDE ?</span>
+      <h2>Contacter le développeur</h2>
+      <p>Retrouve les différents espaces de contact.</p>
+
+      <a href="https://t.me/Mr_king_kayseur" target="_blank" rel="noopener">Telegram</a>
+      <a href="mailto:kingkayseur@gmail.com">Email</a>
+      <a href="https://whatsapp.com/channel/0029VbDvPxj0VycNWTvOrE0x" target="_blank" rel="noopener">Chaîne WhatsApp</a>
+
+      <span class="contact-unavailable">Groupe WhatsApp — lien à ajouter</span>
+      <span class="contact-unavailable">Instagram — lien à ajouter</span>
+      <span class="contact-unavailable">Facebook — lien à ajouter</span>
+    </div>
   </div>
-  <div class="visual" aria-label="Illustration KAYSEUR ACADEMY">
-    <div class="orbit"></div><div class="core">K<small>ACADEMY</small></div>
-    <span class="float one">&lt;/&gt; CODE</span><span class="float two">✦ AI</span>
-    <span class="float three">PROGRESSION<br><b>+1 compétence</b></span>
-  </div>
-</section>
-<section class="stats"><span><b>01</b> Apprentissage progressif</span><span><b>02</b> Projets pratiques</span><span><b>03</b> Assistant intelligent</span></section>
-<section class="section" id="courses">
-  <span class="eyebrow">LA BIBLIOTHÈQUE</span><h2>Commence par apprendre.</h2>
-  <p class="muted">Choisis un domaine et découvre les premières leçons gratuites.</p>
-  <div class="grid">
-    <article class="course"><div class="symbol purple">&lt;/&gt;</div><small>PROGRAMMATION</small><h3>Les bases du développement web</h3><p>Découvre HTML, CSS et JavaScript pour créer tes premières pages web.</p><footer>Débutant · Gratuit <button data-course="web">Ouvrir ↗</button></footer></article>
-    <article class="course"><div class="symbol blue">✦</div><small>INTELLIGENCE ARTIFICIELLE</small><h3>Comprendre l'intelligence artificielle</h3><p>Découvre les notions essentielles, les usages et les limites de l'IA.</p><footer>Débutant · Gratuit <button data-course="ai">Ouvrir ↗</button></footer></article>
-    <article class="course"><div class="symbol pink">⌘</div><small>OUTILS NUMÉRIQUES</small><h3>Bien démarrer avec les outils numériques</h3><p>Apprends à organiser tes fichiers et utiliser les outils numériques.</p><footer>Débutant · Gratuit <button data-course="tools">Ouvrir ↗</button></footer></article>
-  </div>
-  <article class="lesson hidden" id="lesson"><button class="close" id="closeLesson" aria-label="Fermer">×</button><span class="eyebrow">LEÇON GRATUITE</span><h3 id="lessonTitle"></h3><p id="lessonBody"></p><div class="tip">À retenir : avance étape par étape et pratique chaque notion dans un petit projet.</div></article>
-</section>
-<section class="assistant" id="assistant">
-  <div class="chat"><div class="chathead">● ● ● <span>KAYSEUR AI</span></div><p class="bubble">Explique-moi cette notion simplement.</p><p class="reply"><b>✦ KAYSEUR AI</b><br>On va la découvrir étape par étape, avec un exemple et un exercice.</p><div class="fakeinput">Écris ta question…　↑</div></div>
-  <div><span class="eyebrow">TON ASSISTANT D'APPRENTISSAGE</span><h2>Un accompagnement pour mieux comprendre.</h2><p>KAYSEUR AI pourra expliquer les notions, proposer des exercices, aider à comprendre les erreurs de code et guider tes projets.</p><ul><li>Explications adaptées à ton niveau</li><li>Exercices et corrections guidées</li><li>Aide à la programmation et aux projets</li></ul><button class="primary" id="useAI">Accéder à KAYSEUR AI ↗</button><p class="fine">Un compte sera nécessaire pour utiliser l'assistant.</p></div>
-</section>
-<section class="progress" id="progress"><div><span class="eyebrow">TON ESPACE PERSONNEL</span><h2>Retrouve ton parcours.</h2><p>Connecte-toi pour sauvegarder tes cours terminés et reprendre là où tu t'es arrêté.</p></div><button class="outline" id="saveProgress">Ma progression ↗</button></section>
-</main>
-<footer class="sitefooter"><a class="brand" href="#home"><span class="mark">K</span><span>KAYSEUR <b>ACADEMY</b></span></a><span>Apprendre. Créer. Progresser.</span><span>© <span id="year"></span> KAYSEUR ACADEMY</span></footer>
-<dialog id="accountDialog"><button class="close" id="dismiss" aria-label="Fermer">×</button><span class="eyebrow">ESPACE ÉTUDIANT</span><h2>Ton compte arrive bientôt.</h2><p>La connexion sécurisée sera configurée pour Google, e-mail, téléphone et GitHub.</p><div class="providers"><span>G Google</span><span>✉ E-mail</span><span>☎ Téléphone</span><span>⌘ GitHub</span></div><p class="fine">Les cours gratuits restent accessibles sans compte. La connexion sera obligatoire pour KAYSEUR AI et la sauvegarde de progression.</p><button class="primary" id="continue">Continuer à explorer</button></dialog>
-<script src="app.js"></script>
+
+  <footer>
+    <p>© 2026 KAYSEUR ACADEMY — Tous droits réservés.</p>
+    <button id="footerContact">Contacter le dev</button>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
