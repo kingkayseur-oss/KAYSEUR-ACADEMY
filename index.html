@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090611">
+  <meta name="description" content="KAYSEUR ACADEMY — cours, programmation et intelligence artificielle.">
+  <title>KAYSEUR ACADEMY</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#home"><span class="mark">K</span><span>KAYSEUR <b>ACADEMY</b></span></a>
+  <nav><a href="#courses">Cours</a><a href="#progress">Progression</a><a href="#assistant">KAYSEUR AI</a></nav>
+  <button class="outline" id="account">Mon compte</button>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="hero-copy">
+    <span class="eyebrow">✦ APPRENDS À TON RYTHME</span>
+    <h1>Transforme ta curiosité en <em>compétences.</em></h1>
+    <p>Des cours pratiques, des projets guidés et un assistant IA pour t'accompagner dans ton apprentissage du numérique.</p>
+    <a class="primary" href="#courses">Explorer les cours ↗</a>
+    <p class="note">✓ Les cours gratuits sont accessibles sans compte.</p>
+  </div>
+  <div class="visual" aria-label="Illustration KAYSEUR ACADEMY">
+    <div class="orbit"></div><div class="core">K<small>ACADEMY</small></div>
+    <span class="float one">&lt;/&gt; CODE</span><span class="float two">✦ AI</span>
+    <span class="float three">PROGRESSION<br><b>+1 compétence</b></span>
+  </div>
+</section>
+<section class="stats"><span><b>01</b> Apprentissage progressif</span><span><b>02</b> Projets pratiques</span><span><b>03</b> Assistant intelligent</span></section>
+<section class="section" id="courses">
+  <span class="eyebrow">LA BIBLIOTHÈQUE</span><h2>Commence par apprendre.</h2>
+  <p class="muted">Choisis un domaine et découvre les premières leçons gratuites.</p>
+  <div class="grid">
+    <article class="course"><div class="symbol purple">&lt;/&gt;</div><small>PROGRAMMATION</small><h3>Les bases du développement web</h3><p>Découvre HTML, CSS et JavaScript pour créer tes premières pages web.</p><footer>Débutant · Gratuit <button data-course="web">Ouvrir ↗</button></footer></article>
+    <article class="course"><div class="symbol blue">✦</div><small>INTELLIGENCE ARTIFICIELLE</small><h3>Comprendre l'intelligence artificielle</h3><p>Découvre les notions essentielles, les usages et les limites de l'IA.</p><footer>Débutant · Gratuit <button data-course="ai">Ouvrir ↗</button></footer></article>
+    <article class="course"><div class="symbol pink">⌘</div><small>OUTILS NUMÉRIQUES</small><h3>Bien démarrer avec les outils numériques</h3><p>Apprends à organiser tes fichiers et utiliser les outils numériques.</p><footer>Débutant · Gratuit <button data-course="tools">Ouvrir ↗</button></footer></article>
+  </div>
+  <article class="lesson hidden" id="lesson"><button class="close" id="closeLesson" aria-label="Fermer">×</button><span class="eyebrow">LEÇON GRATUITE</span><h3 id="lessonTitle"></h3><p id="lessonBody"></p><div class="tip">À retenir : avance étape par étape et pratique chaque notion dans un petit projet.</div></article>
+</section>
+<section class="assistant" id="assistant">
+  <div class="chat"><div class="chathead">● ● ● <span>KAYSEUR AI</span></div><p class="bubble">Explique-moi cette notion simplement.</p><p class="reply"><b>✦ KAYSEUR AI</b><br>On va la découvrir étape par étape, avec un exemple et un exercice.</p><div class="fakeinput">Écris ta question…　↑</div></div>
+  <div><span class="eyebrow">TON ASSISTANT D'APPRENTISSAGE</span><h2>Un accompagnement pour mieux comprendre.</h2><p>KAYSEUR AI pourra expliquer les notions, proposer des exercices, aider à comprendre les erreurs de code et guider tes projets.</p><ul><li>Explications adaptées à ton niveau</li><li>Exercices et corrections guidées</li><li>Aide à la programmation et aux projets</li></ul><button class="primary" id="useAI">Accéder à KAYSEUR AI ↗</button><p class="fine">Un compte sera nécessaire pour utiliser l'assistant.</p></div>
+</section>
+<section class="progress" id="progress"><div><span class="eyebrow">TON ESPACE PERSONNEL</span><h2>Retrouve ton parcours.</h2><p>Connecte-toi pour sauvegarder tes cours terminés et reprendre là où tu t'es arrêté.</p></div><button class="outline" id="saveProgress">Ma progression ↗</button></section>
+</main>
+<footer class="sitefooter"><a class="brand" href="#home"><span class="mark">K</span><span>KAYSEUR <b>ACADEMY</b></span></a><span>Apprendre. Créer. Progresser.</span><span>© <span id="year"></span> KAYSEUR ACADEMY</span></footer>
+<dialog id="accountDialog"><button class="close" id="dismiss" aria-label="Fermer">×</button><span class="eyebrow">ESPACE ÉTUDIANT</span><h2>Ton compte arrive bientôt.</h2><p>La connexion sécurisée sera configurée pour Google, e-mail, téléphone et GitHub.</p><div class="providers"><span>G Google</span><span>✉ E-mail</span><span>☎ Téléphone</span><span>⌘ GitHub</span></div><p class="fine">Les cours gratuits restent accessibles sans compte. La connexion sera obligatoire pour KAYSEUR AI et la sauvegarde de progression.</p><button class="primary" id="continue">Continuer à explorer</button></dialog>
+<script src="app.js"></script>
+</body>
+</html>
